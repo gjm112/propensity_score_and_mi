@@ -1,0 +1,90 @@
+\documentclass{article}
+
+\usepackage{arxiv}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{lmodern}        % https://github.com/rstudio/rticles/issues/343
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{graphicx}
+
+\title{\textbf{Estimating Aging Curves: Using Multiple Imputation to Examine Career Trajectories of MLB Offensive Players}}
+
+\author{
+    Quang Nguyen
+   \\
+    Department of Statistics and Data Science \\
+    Carnegie Mellon University \\
+  Pittsburgh, PA 15213 \\
+  \texttt{\href{mailto:nmquang@cmu.edu}{\nolinkurl{nmquang@cmu.edu}}} \\
+   \And
+    Gregory J. Matthews
+   \\
+    Department of Mathematics and Statistics \\
+    Loyola University Chicago \\
+  Chicago, IL 60660 \\
+  \texttt{\href{mailto:gmatthews1@luc.edu}{\nolinkurl{gmatthews1@luc.edu}}} \\
+  }
+
+
+% tightlist command for lists without linebreak
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+\usepackage{setspace} \setstretch{1.07} \usepackage{float} \floatplacement{figure}{H} \usepackage{mathpazo}
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+In sports, an aging curve depicts the relationship between average
+performance and age in athletes' careers. This paper investigates the
+aging curves for offensive players in the Major League Baseball. We
+study this problem in a missing data context and account for different
+types of dropouts of baseball players during their careers. In
+particular, the performance metrics associated with the missing seasons
+are imputed using a multiple imputation model for multilevel data, and
+the aging curves are constructed based on the imputed datasets. We first
+perform a simulation study to evaluate the effects of different dropout
+mechanisms on the estimation of aging curves. Our method is then
+illustrated with analyses of MLB player data from past seasons. Results
+suggest an overestimation of the aging curves constructed without
+imputing the unobserved seasons, whereas a better estimate is achieved
+with our approach.
+\end{abstract}
+
+\keywords{
+    aging curve
+   \and
+    baseball
+   \and
+    multiple imputation
+   \and
+    statistics in sports
+  }
+
+\hypertarget{sec:intro}{%
+\section{Introduction}\label{sec:intro}}
+
+\hypertarget{supplementary-material}{%
+\section*{Supplementary Material}\label{supplementary-material}}
+\addcontentsline{toc}{section}{Supplementary Material}
+
+All code for reproducing the analyses in this paper is publicly
+available at
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\bibliographystyle{unsrt}
+\bibliography{references.bib}
+
+
+\end{document}

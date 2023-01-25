@@ -1,0 +1,63 @@
+---
+title: |
+  \textbf{Estimating Aging Curves: Using Multiple Imputation to Examine Career Trajectories of MLB Offensive Players}
+authors:
+  - name: Quang Nguyen
+    department: Department of Statistics and Data Science
+    affiliation: Carnegie Mellon University
+    location: Pittsburgh, PA 15213
+    email: nmquang@cmu.edu
+  - name: Gregory J. Matthews
+    department: Department of Mathematics and Statistics
+    affiliation: Loyola University Chicago
+    location: Chicago, IL 60660
+    email: gmatthews1@luc.edu
+abstract: |
+  In sports, an aging curve depicts the relationship between average performance and age in athletes' careers.
+  This paper investigates the aging curves for offensive players in the Major League Baseball. 
+  We study this problem in a missing data context and account for different types of dropouts of baseball players during their careers. 
+  In particular, the performance metrics associated with the missing seasons are imputed using a multiple imputation model for multilevel data, and the aging curves are constructed based on the imputed datasets. 
+  We first perform a simulation study to evaluate the effects of different dropout mechanisms on the estimation of aging curves. 
+  Our method is then illustrated with analyses of MLB player data from past seasons. 
+  Results suggest an overestimation of the aging curves constructed without imputing the unobserved seasons, whereas a better estimate is achieved with our approach.
+keywords:
+  - aging curve
+  - baseball
+  - multiple imputation
+  - statistics in sports
+bibliography: references.bib
+csl: apa.csl
+output: rticles::arxiv_article
+header-includes:
+ \usepackage{setspace}
+ \setstretch{1.07}
+ \usepackage{float}
+ \floatplacement{figure}{H}
+ \usepackage{mathpazo}
+---
+
+```{r setup, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	fig.align = "center",
+	fig.pos = "t",
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+```{r pkgs}
+library(tidyverse)
+theme_set(theme_minimal())
+library(Lahman)
+```
+
+# Introduction {#sec:intro}
+
+
+
+# Supplementary Material {-}
+
+All code for reproducing the analyses in this paper is publicly available at 
+
+# References

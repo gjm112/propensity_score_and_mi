@@ -37,6 +37,35 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 
+% Pandoc citation processing
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+% for Pandoc 2.8 to 2.10.1
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
+% For Pandoc 2.11+
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{setspace} \setstretch{1.07} \usepackage{float} \floatplacement{figure}{H} \usepackage{mathpazo}
 \begin{document}
@@ -73,6 +102,8 @@ with our approach.
 \hypertarget{sec:intro}{%
 \section{Introduction}\label{sec:intro}}
 
+Mitra \& Reiter (2016): This paper blah blah
+
 \hypertarget{supplementary-material}{%
 \section*{Supplementary Material}\label{supplementary-material}}
 \addcontentsline{toc}{section}{Supplementary Material}
@@ -81,7 +112,18 @@ All code for reproducing the analyses in this paper is publicly
 available at
 
 \hypertarget{references}{%
-\section{References}\label{references}}
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-MitraReiter2016}{}}%
+Mitra, R., \& Reiter, J. (2016). A comparison of two methods of
+estimating propensity scores after multiple imputation.
+\emph{Statistical Methods in Medical Research}, \emph{25}(1), 188--204.
+\url{https://doi.org/10.1177/0962280212445945}
+
+\end{CSLReferences}
 
 \bibliographystyle{unsrt}
 \bibliography{references.bib}

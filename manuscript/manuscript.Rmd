@@ -54,7 +54,7 @@ library(Lahman)
 
 # Introduction {#sec:intro}
 
-@MitraReiter2016: This paper blah blah
+@MitraReiter2016: This paper 
 
 # Supplementary Material {-}
 
